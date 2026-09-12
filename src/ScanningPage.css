@@ -1,0 +1,1263 @@
+/* =========================================
+   AI HAIR DETECTOR
+   RETRO FUN SCANNING PAGE
+========================================= */
+
+.scanning-page {
+  min-height: 100vh;
+  width: 100%;
+  background: #fff8ed;
+  color: #111111;
+  font-family: "Courier New", monospace;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.retro-header {
+  height: 72px;
+  border-bottom: 3px solid #111111;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6%;
+  position: relative;
+  z-index: 5;
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.smiley {
+  width: 42px;
+  height: 42px;
+  background: #ffe11a;
+  border: 3px solid #111111;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.page-number {
+  font-size: 21px;
+  font-weight: 900;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.scanner-main {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 58px 30px 50px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================
+   ANALYSING
+========================================= */
+
+.analysing-label {
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 5px;
+  margin-bottom: 8px;
+}
+
+
+/* =========================================
+   VIEW TITLE
+========================================= */
+
+.view-title-box {
+  display: inline-block;
+  background: #ffe11a;
+  border: 4px solid #111111;
+  border-radius: 20px;
+  padding: 8px 55px;
+  box-shadow: 8px 8px 0 #111111;
+  transform: rotate(-1deg);
+  margin-bottom: 15px;
+}
+
+.view-title-box h1 {
+  margin: 0;
+  font-size: 48px;
+  line-height: 1.05;
+  font-weight: 1000;
+  letter-spacing: 4px;
+}
+
+.scan-subtitle-retro {
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+}
+
+
+/* =========================================
+   SCANNER CARD
+========================================= */
+
+.scanner-card {
+  width: min(560px, 72vw);
+  height: min(455px, 47vw);
+  min-height: 330px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 4px solid #111111;
+  border-radius: 24px;
+  padding: 14px;
+  box-shadow: 10px 10px 0 #111111;
+  position: relative;
+  z-index: 3;
+}
+
+.scanner-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border: 3px dashed #111111;
+  background: #e8e8e8;
+}
+
+
+/* =========================================
+   PHOTO
+========================================= */
+
+.scanned-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+
+/* =========================================
+   SCAN GRID
+========================================= */
+
+.scan-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.08) 1px,
+      transparent 1px
+    );
+
+  background-size: 36px 36px;
+}
+
+
+/* =========================================
+   GREEN SCAN LINE
+========================================= */
+
+.retro-scan-line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: #39ff72;
+  box-shadow:
+    0 0 8px #39ff72,
+    0 0 22px #39ff72,
+    0 0 45px rgba(57, 255, 114, 0.8);
+  z-index: 5;
+  animation: retroScan 2.5s ease-in-out infinite;
+}
+
+@keyframes retroScan {
+  0% {
+    top: 0%;
+  }
+
+  50% {
+    top: 50%;
+  }
+
+  100% {
+    top: 100%;
+  }
+}
+
+
+/* =========================================
+   SCAN CORNERS
+========================================= */
+
+.scan-corner {
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  z-index: 6;
+  border-color: #39ff72;
+  border-style: solid;
+}
+
+.top-left {
+  top: 12px;
+  left: 12px;
+  border-width: 5px 0 0 5px;
+}
+
+.top-right {
+  top: 12px;
+  right: 12px;
+  border-width: 5px 5px 0 0;
+}
+
+.bottom-left {
+  bottom: 12px;
+  left: 12px;
+  border-width: 0 0 5px 5px;
+}
+
+.bottom-right {
+  bottom: 12px;
+  right: 12px;
+  border-width: 0 5px 5px 0;
+}
+
+
+/* =========================================
+   STEP TRACKER
+========================================= */
+
+.step-tracker {
+  margin: 45px auto 28px;
+  width: min(540px, 80vw);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.step-tracker::before {
+  content: "";
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  top: 25px;
+  border-top: 3px dashed #111111;
+  z-index: 0;
+}
+
+.tracker-item {
+  position: relative;
+  z-index: 1;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.tracker-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #e8e8e8;
+  border: 4px solid #111111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.tracker-item span {
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.tracker-item.completed .tracker-circle {
+  background: #72ff43;
+}
+
+.tracker-item.active .tracker-circle {
+  background: #ff3b92;
+  box-shadow: 0 0 0 5px #ffe1ef;
+  transform: scale(1.08);
+}
+
+.tracker-item.active span {
+  color: #ff1780;
+}
+
+
+/* =========================================
+   PROGRESS BAR
+========================================= */
+
+.progress-wrapper {
+  width: min(680px, 85vw);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.progress-bar {
+  height: 48px;
+  flex: 1;
+  background: #dedede;
+  border: 4px solid #111111;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #72ff43;
+  transition: width 0.5s ease;
+  min-width: 2%;
+}
+
+.progress-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.progress-percent {
+  font-size: 17px;
+  font-weight: 900;
+  min-width: 45px;
+}
+
+
+/* =========================================
+   BOTTOM NOTE
+========================================= */
+
+.scanner-note {
+  width: min(620px, 85vw);
+  margin: 25px auto 0;
+  background: #ffddeb;
+  border-radius: 15px;
+  padding: 15px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  text-align: left;
+}
+
+.note-icon {
+  font-size: 32px;
+}
+
+.note-text {
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   SIDE STICKERS
+========================================= */
+
+.side-sticker {
+  position: absolute;
+  border: 4px solid #111111;
+  box-shadow: 6px 6px 0 #111111;
+  font-weight: 900;
+  z-index: 5;
+}
+
+
+/* LEFT */
+
+.left-sticker {
+  left: 25px;
+  top: 280px;
+  background: #ff3b92;
+  padding: 20px 22px;
+  border-radius: 16px;
+  transform: rotate(-7deg);
+  font-size: 20px;
+  text-align: left;
+}
+
+.left-message {
+  position: absolute;
+  left: 40px;
+  top: 420px;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.45;
+  transform: rotate(-5deg);
+  text-align: left;
+}
+
+
+/* RIGHT */
+
+.right-sticker {
+  right: 30px;
+  top: 350px;
+  background: #ffffff;
+  padding: 18px 20px;
+  border-radius: 14px;
+  transform: rotate(5deg);
+  text-align: left;
+  font-size: 16px;
+}
+
+.hourglass {
+  position: absolute;
+  right: 70px;
+  top: 465px;
+  font-size: 48px;
+  transform: rotate(-5deg);
+}
+
+
+/* =========================================
+   DOT PATTERNS
+========================================= */
+
+.dot-pattern {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  background-image: radial-gradient(
+    #ff3b92 3px,
+    transparent 3px
+  );
+  background-size: 16px 16px;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.dots-left {
+  left: -20px;
+  bottom: 20px;
+  border-radius: 50%;
+}
+
+.dots-right {
+  right: -20px;
+  top: 180px;
+  border-radius: 50%;
+}
+
+
+/* =========================================
+   PIXEL DECORATIONS
+========================================= */
+
+.pixel-decoration {
+  position: absolute;
+  font-size: 45px;
+  font-weight: 900;
+  z-index: 4;
+}
+
+.cyan-plus {
+  color: #00c9ff;
+  left: 100px;
+  bottom: 180px;
+}
+
+.yellow-star {
+  color: #ffe11a;
+  right: 110px;
+  bottom: 190px;
+}
+
+.pink-plus {
+  color: #ff3b92;
+  left: 45%;
+  top: 100px;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.retro-button {
+  border: 4px solid #111111;
+  background: #ffe11a;
+  color: #111111;
+  padding: 14px 30px;
+  border-radius: 12px;
+  box-shadow: 6px 6px 0 #111111;
+  font-family: "Courier New", monospace;
+  font-size: 17px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+
+.retro-button:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 3px 3px 0 #111111;
+}
+
+
+/* =========================================
+   RESULT PAGE
+========================================= */
+
+.result-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+.result-frame {
+  width: min(700px, 85vw);
+  min-height: 620px;
+  background: #ffffff;
+  border: 4px solid #111111;
+  border-radius: 25px;
+  box-shadow: 12px 12px 0 #111111;
+  padding: 60px 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.result-small {
+  position: absolute !important;
+  top: 100px;              /* ADD THIS */
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 90%;
+  text-align: center;
+  z-index: 10;
+
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.result-title {
+      position: relative;
+  top: 60px;
+  background: #ffe11a;
+  border: 4px solid #111111;
+  padding: 12px 30px;
+  border-radius: 15px;
+  box-shadow: 6px 6px 0 #111111;
+  font-size: 31px;
+  font-weight: 900;
+  transform: rotate(-1deg);
+}
+
+.result-number {
+  position: relative;
+  top: 45px;
+
+  font-size: clamp(50px, 8vw, 85px);
+  font-weight: 1000;
+  line-height: 1;
+  margin: 35px 0 5px;
+  letter-spacing: 3px;
+}
+
+.result-party {
+  font-size: 55px;
+  margin: 5px 0;
+   top: 30px;
+}
+
+.result-text {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 5px 0 25px;
+}
+
+.result-sticker {
+  position: absolute;
+  left: 25px;
+  top: 40px;
+  background: #ff3b92;
+  border: 4px solid #111111;
+  border-radius: 15px;
+  padding: 13px 18px;
+  font-weight: 900;
+  box-shadow: 5px 5px 0 #111111;
+  transform: rotate(-7deg);
+
+  /* Floating animation */
+  animation: stickerFloat 3s ease-in-out infinite;
+}
+
+@keyframes stickerFloat {
+  0% {
+    transform: rotate(-7deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(-5deg) translateY(-5px);
+  }
+
+  100% {
+    transform: rotate(-7deg) translateY(0);
+  }
+}
+
+.result-note {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #ffddeb;
+  border-radius: 14px;
+  padding: 14px 25px;
+  margin-bottom: 28px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.result-note span {
+  font-size: 30px;
+}
+
+.result-spark {
+  position: absolute;
+  font-size: 45px;
+  font-weight: 900;
+  z-index: 4;
+  animation: floatingStar 2.5s ease-in-out infinite;
+}
+
+
+/* Yellow star */
+
+.spark-one {
+  right: 45px;
+  top: 80px;
+  color: #ffe11a;
+  animation-delay: 0s;
+}
+
+
+/* Cyan plus */
+
+.spark-two {
+  left: 55px;
+  bottom: 80px;
+  color: #00c9ff;
+  animation-delay: 0.8s;
+}
+
+
+/* Floating movement */
+
+@keyframes floatingStar {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(-8px) rotate(8deg);
+  }
+
+  50% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  75% {
+    transform: translateY(8px) rotate(-8deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.spark-one {
+  right: 45px;
+  top: 80px;
+  color: #ffe11a;
+}
+
+.spark-two {
+  left: 55px;
+  bottom: 80px;
+  color: #00c9ff;
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.retro-frame {
+  width: min(600px, 85vw);
+  background: #ffffff;
+  border: 4px solid #111111;
+  border-radius: 25px;
+  box-shadow: 10px 10px 0 #111111;
+  padding: 60px 35px;
+  text-align: center;
+}
+
+.error-sticker {
+  font-size: 60px;
+}
+
+.error-title {
+  font-size: 42px;
+  margin: 15px 0;
+}
+
+.error-message {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .scanner-main {
+    padding-top: 40px;
+  }
+
+  .view-title-box {
+    padding: 8px 30px;
+  }
+
+  .view-title-box h1 {
+    font-size: 34px;
+  }
+
+  .left-sticker,
+  .left-message,
+  .right-sticker,
+  .hourglass {
+    display: none;
+  }
+
+  .scanner-card {
+    width: 85vw;
+    height: 60vw;
+    min-height: 300px;
+  }
+
+  .brand {
+    font-size: 16px;
+  }
+
+  .retro-header {
+    padding: 0 8%;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .scanning-page::before {
+    inset: 8px;
+    border-width: 2px;
+  }
+
+  .retro-header {
+    height: 60px;
+  }
+
+  .brand {
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+
+  .smiley {
+    width: 34px;
+    height: 34px;
+    font-size: 17px;
+  }
+
+  .page-number {
+    font-size: 15px;
+  }
+
+  .scanner-main {
+    padding: 30px 15px;
+  }
+
+  .analysing-label {
+    font-size: 14px;
+  }
+
+  .view-title-box h1 {
+    font-size: 27px;
+  }
+
+  .scan-subtitle-retro {
+    font-size: 13px;
+  }
+
+  .scanner-card {
+    width: 92vw;
+    height: 65vw;
+    min-height: 250px;
+  }
+
+  .step-tracker {
+    margin-top: 35px;
+  }
+
+  .tracker-circle {
+    width: 42px;
+    height: 42px;
+  }
+
+  .tracker-item span {
+    font-size: 12px;
+  }
+
+  .progress-text {
+    font-size: 11px;
+  }
+
+  .scanner-note {
+    font-size: 12px;
+  }
+
+  .result-frame {
+    min-height: 550px;
+    padding: 50px 20px;
+  }
+
+  .result-title {
+    font-size: 23px;
+  }
+
+  .result-number {
+    font-size: 65px;
+  }
+
+  .result-sticker {
+    left: 15px;
+    top: 20px;
+    font-size: 13px;
+  }
+
+}
+.doubts-button {
+  background: #b75b83;
+}
+/* =================================================
+   BALD LEGEND MOMENT
+================================================= */
+
+.bald-moment {
+  position: relative;
+  width: 100%;
+  min-height: 280px;
+  margin-top: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+/* =========================
+   BALD HEAD
+========================= */
+
+.bald-head {
+  font-size: 76px;
+  line-height: 1;
+
+  animation: baldHeadBounce 1s ease-in-out infinite;
+
+  filter: drop-shadow(4px 4px 0 #111111);
+}
+
+/* =========================
+   BALD LEGEND TITLE
+========================= */
+
+.bald-title {
+  margin-top: 10px;
+
+  font-family: "Courier New", monospace;
+  font-size: clamp(24px, 4vw, 38px);
+  font-weight: 1000;
+  letter-spacing: 2px;
+
+  color: #ff3b92;
+
+  text-shadow: 3px 3px 0 #111111;
+
+  animation: baldTitlePop 0.7s ease-out;
+}
+
+/* =========================
+   BALD MESSAGE
+========================= */
+
+.bald-message {
+  margin-top: 14px;
+
+  padding: 10px 15px;
+
+  border: 3px solid #111111;
+  border-radius: 10px;
+
+  background: #ffe11a;
+  color: #111111;
+
+  font-family: "Courier New", monospace;
+  font-size: clamp(11px, 2vw, 15px);
+  font-weight: 900;
+
+  text-align: center;
+
+  box-shadow: 4px 4px 0 #111111;
+
+  animation: baldMessagePop 0.8s ease-out;
+}
+
+/* =========================
+   FLYING COMB
+========================= */
+
+.bald-comb-wrapper {
+  position: absolute;
+
+  top: 48%;
+  left: -90px;
+
+  width: 100%;
+
+  pointer-events: none;
+
+  z-index: 10;
+}
+
+.bald-flying-comb {
+  width: 75px;
+  height: auto;
+
+  animation: flyingComb 2.5s ease-in-out infinite;
+}
+
+/* =========================
+   FUNNY JOKE
+========================= */
+
+.bald-joke {
+  margin-top: 18px;
+
+  font-family: "Courier New", monospace;
+  font-size: clamp(10px, 1.7vw, 13px);
+  font-weight: 1000;
+  letter-spacing: 1px;
+
+  color: #111111;
+
+  text-align: center;
+
+  animation: jokeShake 1.2s ease-in-out infinite;
+}
+
+/* =========================
+   BALD CONFETTI
+========================= */
+
+.bald-confetti {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
+.bald-confetti span {
+  position: absolute;
+
+  font-family: "Courier New", monospace;
+  font-size: 28px;
+  font-weight: 900;
+
+  animation: baldConfettiFall 1.8s ease-out infinite;
+}
+
+/* Individual confetti positions */
+
+.bald-confetti span:nth-child(1) {
+  left: 8%;
+  top: 5%;
+  animation-delay: 0s;
+}
+
+.bald-confetti span:nth-child(2) {
+  left: 20%;
+  top: 35%;
+  animation-delay: 0.2s;
+}
+
+.bald-confetti span:nth-child(3) {
+  right: 12%;
+  top: 10%;
+  animation-delay: 0.4s;
+}
+
+.bald-confetti span:nth-child(4) {
+  right: 25%;
+  top: 40%;
+  animation-delay: 0.6s;
+}
+
+.bald-confetti span:nth-child(5) {
+  left: 35%;
+  top: 0%;
+  animation-delay: 0.8s;
+}
+
+.bald-confetti span:nth-child(6) {
+  right: 38%;
+  top: 20%;
+  animation-delay: 1s;
+}
+
+
+/* =================================================
+   BALD ANIMATIONS
+================================================= */
+
+/* 🧑‍🦲 Head bouncing */
+
+@keyframes baldHeadBounce {
+
+  0% {
+    transform: translateY(0) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(2deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+
+}
+
+
+/* 💥 BALD LEGEND pops in */
+
+@keyframes baldTitlePop {
+
+  0% {
+    opacity: 0;
+    transform: scale(0.3) rotate(-8deg);
+  }
+
+  70% {
+    transform: scale(1.15) rotate(3deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+
+}
+
+
+/* 💀 Message pops in */
+
+@keyframes baldMessagePop {
+
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.7);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+}
+
+
+/* 🪮 Comb flies across screen */
+
+@keyframes flyingComb {
+
+  0% {
+    transform: translateX(0)
+      rotate(-25deg);
+  }
+
+  25% {
+    transform: translateX(220px)
+      translateY(-45px)
+      rotate(20deg);
+  }
+
+  50% {
+    transform: translateX(440px)
+      translateY(20px)
+      rotate(180deg);
+  }
+
+  75% {
+    transform: translateX(650px)
+      translateY(-35px)
+      rotate(250deg);
+  }
+
+  100% {
+    transform: translateX(850px)
+      translateY(10px)
+      rotate(360deg);
+  }
+
+}
+
+
+/* 😂 Joke shakes */
+
+@keyframes jokeShake {
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-2deg);
+  }
+
+  50% {
+    transform: rotate(2deg);
+  }
+
+  75% {
+    transform: rotate(-2deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+
+}
+
+
+/* ✦ Confetti falls */
+
+@keyframes baldConfettiFall {
+
+  0% {
+    opacity: 0;
+    transform:
+      translateY(-20px)
+      rotate(0deg)
+      scale(0.5);
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform:
+      translateY(180px)
+      rotate(180deg)
+      scale(1.2);
+  }
+
+}
+
+
+/* =================================================
+   BALD MOBILE
+================================================= */
+
+@media (max-width: 600px) {
+
+  .bald-moment {
+    min-height: 250px;
+  }
+
+  .bald-head {
+    font-size: 62px;
+  }
+
+  .bald-title {
+    font-size: 23px;
+  }
+
+  .bald-message {
+    font-size: 10px;
+    padding: 8px 10px;
+  }
+
+  .bald-flying-comb {
+    width: 58px;
+  }
+
+  .bald-joke {
+    font-size: 9px;
+  }
+
+}

@@ -1,0 +1,1054 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Caveat+Brush&family=Press+Start+2P&display=swap');
+/* =====================================================
+   WHY PAGE
+===================================================== */
+
+.why-page {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  background-color: #c9f7f7;
+
+  font-family: "Courier New", monospace;
+
+  color: #111111;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   HALFTONE BACKGROUND
+===================================================== */
+
+.why-page::before {
+  content: "";
+
+  position: fixed;
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.28;
+
+  background-image:
+    radial-gradient(#aac4c6 1.5px, transparent 1.5px);
+
+  background-size: 13px 13px;
+
+  z-index: 0;
+}
+
+
+/* =====================================================
+   HEADER — EXACT HOMEPAGE STYLE
+===================================================== */
+
+.why-header {
+  position: relative;
+
+  height: 80px;
+
+  background: #fff5e8;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 7%;
+
+  z-index: 100;
+}
+
+
+.why-logo {
+  font-family: 'Bungee', sans-serif;
+
+  font-size: 23px;
+
+  letter-spacing: -1px;
+
+  color: #171717;
+}
+
+
+.why-nav {
+  display: flex;
+
+  gap: 38px;
+}
+
+
+.why-nav a {
+  text-decoration: none;
+
+  color: #171717;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 17px;
+
+  font-weight: 800;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 0;
+
+  background: transparent;
+
+  box-shadow: none;
+
+  transition: 0.2s ease;
+}
+
+
+.why-nav a:hover {
+  transform: translateY(-2px);
+
+  color: #ff3d91;
+}
+
+
+/* WHY? — same simple navbar style */
+.why-nav a.active {
+  background: transparent;
+
+  border: none;
+
+  box-shadow: none;
+
+  color: #171717;
+}
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.why-content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 1150px;
+
+  margin: auto;
+
+  padding: 50px 30px 70px;
+
+  text-align: center;
+}
+
+
+/* =====================================================
+   WHY BADGE
+===================================================== */
+
+.why-badge {
+  display: inline-block;
+
+  background: #dec712;
+
+  border: 3px solid #111111;
+
+  border-radius: 6px;
+
+  padding: 6px 40px;
+
+  font-size: 18px;
+
+  font-weight: 1000;
+
+  box-shadow: 4px 4px 0 #111111;
+
+  animation: floatingBadge 3s ease-in-out infinite;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.why-title {
+  margin: 25px 0 0;
+
+  font-family: "Courier New", monospace;
+
+  font-size: clamp(45px, 7vw, 78px);
+
+  line-height: 0.95;
+
+  font-weight: 1000;
+
+  letter-spacing: -5px;
+
+  color: #111111;
+
+  text-shadow:
+    5px 5px 0 #ff3b92;
+
+  animation: titleFloat 4s ease-in-out infinite;
+}
+
+
+/* =====================================================
+   SUBTITLE
+===================================================== */
+
+.why-subtitle {
+  margin-top: 17px;
+
+  font-size: 27px;
+
+  font-weight: 900;
+
+  font-family: Georgia, serif;
+}
+
+
+.pink-line {
+  width: 260px;
+
+  height: 7px;
+
+  background: #ff3b92;
+
+  margin: 8px auto 38px;
+
+  transform: rotate(-3deg);
+
+  border-radius: 50%;
+
+  animation: lineFloat 3s ease-in-out infinite;
+}
+
+
+/* =====================================================
+   THREE CARDS
+===================================================== */
+
+.why-cards {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 25px;
+
+  margin-top: 20px;
+}
+
+
+.why-card {
+  min-height: 255px;
+
+  border: 4px solid #111111;
+
+  border-radius: 14px;
+
+  padding: 24px 20px;
+
+  box-shadow:
+    7px 7px 0 #111111;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  transition: 0.25s ease;
+}
+
+
+.why-card:hover {
+  transform:
+    translateY(-10px)
+    rotate(-1deg);
+
+  box-shadow:
+    10px 12px 0 #111111;
+}
+
+
+.pink-card {
+  background: #f78cc4;
+}
+
+
+.yellow-card {
+  background: #ded065;
+}
+
+
+.why-card h2 {
+  margin: 0;
+
+  font-size: 22px;
+
+  line-height: 1.1;
+
+  font-weight: 1000;
+}
+
+
+.card-icon {
+  font-size: 54px;
+
+  line-height: 1;
+
+  margin: 14px 0;
+
+  animation: iconBounce 2.5s ease-in-out infinite;
+}
+
+
+.cross {
+  color: #ff1f65;
+
+  font-size: 75px;
+
+  font-weight: 1000;
+
+  text-shadow: 3px 3px 0 #111111;
+}
+
+
+.check {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #19c936;
+
+  border: 3px solid #111111;
+
+  border-radius: 8px;
+
+  color: white;
+
+  font-size: 45px;
+
+  font-weight: 1000;
+
+  text-shadow: 2px 2px 0 #111111;
+}
+
+
+.why-card h3 {
+  margin: 3px 0 8px;
+
+  font-family: Georgia, serif;
+
+  font-size: 25px;
+
+  font-weight: 900;
+}
+
+
+.why-card p {
+  margin: 0;
+
+  font-size: 15px;
+
+  line-height: 1.35;
+
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   CARD FLOATING ANIMATION
+===================================================== */
+
+.card-one {
+  animation:
+    cardFloatOne 4s ease-in-out infinite;
+}
+
+
+.card-two {
+  animation:
+    cardFloatTwo 4.5s ease-in-out infinite;
+}
+
+
+.card-three {
+  animation:
+    cardFloatThree 4.2s ease-in-out infinite;
+}
+
+
+@keyframes cardFloatOne {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1deg);
+  }
+
+  50% {
+    transform: translateY(-9px) rotate(1deg);
+  }
+
+}
+
+
+@keyframes cardFloatTwo {
+
+  0%,
+  100% {
+    transform: translateY(-3px) rotate(1deg);
+  }
+
+  50% {
+    transform: translateY(8px) rotate(-1deg);
+  }
+
+}
+
+
+@keyframes cardFloatThree {
+
+  0%,
+  100% {
+    transform: translateY(2px) rotate(-1deg);
+  }
+
+  50% {
+    transform: translateY(-11px) rotate(1deg);
+  }
+
+}
+
+
+/* =====================================================
+   BIG MESSAGE
+===================================================== */
+
+.big-message {
+  margin: 45px auto 0;
+
+  max-width: 930px;
+
+  padding: 22px 35px;
+
+  background: #ffffff;
+
+  border: 4px solid #111111;
+
+  border-radius: 12px;
+
+  box-shadow: 7px 7px 0 #111111;
+
+  font-size: 20px;
+
+  font-weight: 1000;
+
+  line-height: 1.4;
+}
+
+
+.big-message strong {
+  display: block;
+
+  margin-top: 5px;
+
+  font-size: clamp(20px, 3vw, 31px);
+
+  color: #ff3b92;
+
+  text-shadow: 2px 2px 0 #111111;
+}
+
+
+.floating-message {
+  animation:
+    messageFloat 4s ease-in-out infinite;
+}
+
+
+@keyframes messageFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+}
+
+
+/* =====================================================
+   EXPERIMENT TAG
+===================================================== */
+
+.experiment-tag {
+  display: inline-block;
+
+  margin-top: 28px;
+
+  padding: 10px 22px;
+
+  background: #111111;
+
+  color: #ffffff;
+
+  border-radius: 5px;
+
+  font-size: 13px;
+
+  font-weight: 900;
+
+  box-shadow: 4px 4px 0 #ffffff;
+
+  animation: tagFloat 3s ease-in-out infinite;
+}
+
+
+@keyframes tagFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+}
+
+
+/* =====================================================
+   LEFT STICKER
+===================================================== */
+
+.fun-sticker {
+  position: absolute;
+
+  z-index: 5;
+
+  border: 4px solid #111111;
+
+  box-shadow: 5px 5px 0 #111111;
+
+  font-size: 16px;
+
+  font-weight: 1000;
+
+  line-height: 1.15;
+
+  text-align: left;
+}
+
+
+.sticker-left {
+  left: 35px;
+
+  top: 155px;
+
+  padding: 18px 22px;
+
+  background: #4de8ef;
+
+  transform: rotate(-10deg);
+
+  animation:
+    stickerFloatLeft 4s ease-in-out infinite;
+}
+
+
+.sticker-right {
+  right: 35px;
+
+  top: 245px;
+
+  padding: 14px 18px;
+
+  background: #ffe51a;
+
+  transform: rotate(-8deg);
+
+  animation:
+    stickerFloatRight 4.5s ease-in-out infinite;
+}
+
+
+.sticker-right strong {
+  color: #ff3b92;
+
+  font-size: 22px;
+}
+
+
+@keyframes stickerFloatLeft {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(-10deg);
+  }
+
+  50% {
+    transform: translateY(-14px) rotate(-6deg);
+  }
+
+}
+
+
+@keyframes stickerFloatRight {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(-8deg);
+  }
+
+  50% {
+    transform: translateY(12px) rotate(-4deg);
+  }
+
+}
+
+
+/* =====================================================
+   DECORATIONS
+===================================================== */
+
+.why-decoration {
+  position: absolute;
+
+  z-index: 4;
+
+  pointer-events: none;
+
+  font-weight: 1000;
+}
+
+
+.crown {
+  left: 100px;
+
+  top: 115px;
+
+  font-size: 65px;
+
+  color: #ffe51a;
+
+  text-shadow:
+    3px 3px 0 #111111;
+
+  animation:
+    crownFloat 3.5s ease-in-out infinite;
+}
+
+
+@keyframes crownFloat {
+
+  0%,
+  100% {
+    transform: rotate(-8deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(5deg) translateY(-12px);
+  }
+
+}
+
+
+.star {
+  font-size: 30px;
+
+  color: #ffe51a;
+
+  text-shadow: 2px 2px 0 #111111;
+
+  animation:
+    starFloat 2.8s ease-in-out infinite;
+}
+
+
+.star-1 {
+  left: 30%;
+
+  top: 110px;
+}
+
+
+.star-2 {
+  right: 28%;
+
+  top: 130px;
+
+  animation-delay: 0.8s;
+}
+
+
+.star-3 {
+  right: 5%;
+
+  top: 510px;
+
+  animation-delay: 1.2s;
+}
+
+
+@keyframes starFloat {
+
+  0%,
+  100% {
+    transform: scale(1) rotate(0);
+  }
+
+  50% {
+    transform: scale(1.3) rotate(20deg);
+  }
+
+}
+
+
+.plus {
+  color: #ff1493;
+
+  font-size: 32px;
+
+  text-shadow: 2px 2px 0 #ffffff;
+
+  animation:
+    plusFloat 3s ease-in-out infinite;
+}
+
+
+.plus-1 {
+  left: 75px;
+
+  top: 330px;
+}
+
+
+.plus-2 {
+  right: 75px;
+
+  top: 390px;
+
+  animation-delay: 1s;
+}
+
+
+.plus-3 {
+  left: 47%;
+
+  bottom: 100px;
+
+  animation-delay: 0.5s;
+}
+
+
+@keyframes plusFloat {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(10deg);
+  }
+
+}
+
+
+/* =====================================================
+   SAME HEAD
+===================================================== */
+
+.same-head {
+  position: absolute;
+
+  left: 20px;
+
+  bottom: 40px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 8px;
+
+  font-size: 11px;
+
+  font-weight: 1000;
+
+  line-height: 1.1;
+
+  animation:
+    sameHeadFloat 4s ease-in-out infinite;
+}
+
+
+.smile {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ffe51a;
+
+  border: 3px solid #111111;
+
+  font-size: 38px;
+
+  box-shadow: 3px 3px 0 #111111;
+}
+
+
+@keyframes sameHeadFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+}
+
+
+/* =====================================================
+   CURIOSITY STICKER
+===================================================== */
+
+.curiosity-sticker {
+  position: absolute;
+
+  right: 25px;
+
+  bottom: 55px;
+
+  width: 125px;
+  height: 125px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background: #ff3b92;
+
+  border: 4px solid #111111;
+
+  clip-path:
+    polygon(
+      50% 0%,
+      61% 10%,
+      75% 5%,
+      82% 18%,
+      96% 20%,
+      91% 35%,
+      100% 50%,
+      89% 61%,
+      95% 76%,
+      80% 80%,
+      75% 95%,
+      60% 89%,
+      50% 100%,
+      39% 90%,
+      24% 96%,
+      19% 81%,
+      4% 76%,
+      10% 61%,
+      0% 50%,
+      10% 38%,
+      4% 23%,
+      20% 19%,
+      25% 5%,
+      39% 11%
+    );
+
+  font-size: 14px;
+
+  font-weight: 1000;
+
+  animation:
+    curiosityFloat 4s ease-in-out infinite;
+}
+
+
+@keyframes curiosityFloat {
+
+  0%,
+  100% {
+    transform: rotate(4deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(-4deg) translateY(-10px);
+  }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .why-header {
+    padding: 0 25px;
+  }
+
+  .why-nav {
+    gap: 10px;
+  }
+
+  .why-nav a {
+    font-size: 14px;
+
+    padding: 7px 10px;
+  }
+
+  .why-cards {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sticker-left {
+    left: 15px;
+    top: 130px;
+  }
+
+  .sticker-right {
+    right: 15px;
+    top: 260px;
+  }
+
+  .crown {
+    display: none;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .why-header {
+    height: auto;
+
+    min-height: 65px;
+
+    padding: 12px 15px;
+
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+
+  .why-logo {
+    font-size: 20px;
+  }
+
+
+  .why-nav {
+    gap: 3px;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+
+
+  .why-nav a {
+    font-size: 12px;
+
+    padding: 5px 8px;
+  }
+
+
+  .why-content {
+    padding:
+      35px 15px 80px;
+  }
+
+
+  .why-title {
+    font-size: 43px;
+
+    letter-spacing: -3px;
+  }
+
+
+  .why-subtitle {
+    font-size: 21px;
+  }
+
+
+  .why-card {
+    min-height: 220px;
+  }
+
+
+  .big-message {
+    padding: 18px 14px;
+
+    font-size: 14px;
+  }
+
+
+  .big-message strong {
+    font-size: 19px;
+  }
+
+
+  .sticker-left,
+  .sticker-right {
+    display: none;
+  }
+
+
+  .plus-1,
+  .plus-2 {
+    display: none;
+  }
+
+
+  .same-head {
+    left: 10px;
+    bottom: 20px;
+  }
+
+
+  .curiosity-sticker {
+    right: 8px;
+    bottom: 25px;
+
+    transform: scale(0.75);
+  }
+
+}

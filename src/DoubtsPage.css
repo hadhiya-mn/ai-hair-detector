@@ -1,0 +1,388 @@
+/* =========================================
+   DOUBTS PAGE
+========================================= */
+
+.doubts-page {
+  min-height: 100vh;
+  background: #fff8ed;
+  color: #111111;
+  font-family: "Courier New", monospace;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.doubts-back-button {
+  position: fixed !important;
+  top: 45px !important;
+  left: 55px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  width: 120px !important;
+  height: 50px !important;
+
+  background: #ffffff !important;
+  color: #111111 !important;
+
+  border: 3px solid #111111 !important;
+  border-radius: 10px !important;
+
+  padding: 0 !important;
+
+  font-family: "Courier New", monospace !important;
+  font-size: 18px !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+
+  text-align: center !important;
+  text-indent: 0 !important;
+
+  opacity: 1 !important;
+  visibility: visible !important;
+
+  z-index: 99999 !important;
+  cursor: pointer !important;
+
+  box-shadow: 4px 4px 0 #111111 !important;
+
+  transition: 0.15s ease !important;
+}
+
+.doubts-back-button:hover {
+  transform: translate(2px, 2px) !important;
+  box-shadow: 2px 2px 0 #111111 !important;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.doubts-heading {
+  padding-top: 70px;
+}
+
+.small-heading {
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+
+
+/* =========================================
+   ANY DOUBTS TAG
+========================================= */
+
+.doubts-heading h1 {
+  display: inline-block;
+
+  background: #ff3b92;
+
+  border: 4px solid #111111;
+  border-radius: 15px;
+
+  padding: 12px 45px;
+  margin: 12px 0;
+
+  font-size: 45px;
+  font-weight: 900;
+
+  box-shadow: 7px 7px 0 #111111;
+
+  transform: rotate(-1deg);
+
+  animation: doubtsTagPop 0.7s ease-out;
+}
+
+
+/* =========================================
+   TAG ENTRANCE
+========================================= */
+
+@keyframes doubtsTagPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.7) rotate(-8deg);
+  }
+
+  70% {
+    opacity: 1;
+    transform: scale(1.05) rotate(1deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(-1deg);
+  }
+}
+
+
+/* =========================================
+   SUBTITLE
+========================================= */
+
+.doubts-heading p {
+  font-size: 18px;
+  font-weight: 900;
+  margin-top: 8px;
+}
+
+
+/* =========================================
+   CHARACTER AREA
+========================================= */
+
+.character-section {
+  position: relative;
+
+  width: 650px;
+  max-width: 90vw;
+
+  margin: 10px auto 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+
+/* =========================================
+   CHARACTER
+========================================= */
+
+.doubt-character {
+  width: 600px;
+  max-width: 90vw;
+
+  object-fit: contain;
+
+  animation:
+    characterEntrance 0.9s ease-out,
+    characterFloat 3s ease-in-out 0.9s infinite;
+}
+
+
+/* =========================================
+   CHARACTER ENTRANCE
+========================================= */
+
+@keyframes characterEntrance {
+  0% {
+    opacity: 0;
+    transform:
+      translateY(80px)
+      scale(0.75)
+      rotate(-5deg);
+  }
+
+  70% {
+    opacity: 1;
+    transform:
+      translateY(-10px)
+      scale(1.04)
+      rotate(2deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform:
+      translateY(0)
+      scale(1)
+      rotate(0deg);
+  }
+}
+
+
+/* =========================================
+   CHARACTER FLOATING
+========================================= */
+
+@keyframes characterFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   PIXELATED FLOATING DECORATIONS
+========================================= */
+
+.doubt-star,
+.doubt-plus {
+  position: absolute;
+  font-weight: 900;
+  z-index: 2;
+
+  animation: decorationFloat 3s ease-in-out infinite;
+}
+
+
+/* =========================================
+   YELLOW STARS
+========================================= */
+
+.doubt-star {
+  color: #ffe11a;
+  font-size: 45px;
+}
+
+
+/* Left star */
+
+.star-one {
+  left: 12%;
+  top: 25%;
+}
+
+
+/* Right star */
+
+.star-two {
+  right: 12%;
+  top: 30%;
+  animation-delay: 1s;
+}
+
+
+/* =========================================
+   CYAN PLUS
+========================================= */
+
+.doubt-plus {
+  color: #00c9ff;
+  font-size: 45px;
+}
+
+
+/* Left bottom plus */
+
+.plus-one {
+  left: 15%;
+  bottom: 20%;
+  animation-delay: 0.5s;
+}
+
+
+/* Right bottom plus */
+
+.plus-two {
+  right: 15%;
+  bottom: 15%;
+  color: #ff3b92;
+  animation-delay: 1.5s;
+}
+
+
+/* =========================================
+   FLOATING ANIMATION
+========================================= */
+
+@keyframes decorationFloat {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(-8px) rotate(5deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(10deg);
+  }
+
+  75% {
+    transform: translateY(-5px) rotate(5deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+  .doubts-heading {
+    padding-top: 80px;
+  }
+
+  .doubts-heading h1 {
+    font-size: 32px;
+    padding: 10px 25px;
+  }
+
+  .doubts-heading p {
+    font-size: 15px;
+  }
+
+  .character-section {
+    width: 100%;
+  }
+
+  .doubt-character {
+    width: 500px;
+    max-width: 90vw;
+  }
+
+  /* Mobile BACK button */
+
+  .doubts-back-button {
+    top: 35px !important;
+    left: 35px !important;
+
+    width: 100px !important;
+    height: 45px !important;
+
+    font-size: 16px !important;
+  }
+
+  .doubt-star {
+    font-size: 32px;
+  }
+
+  .doubt-plus {
+    font-size: 32px;
+  }
+}
+.developed-by {
+  position: fixed;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #111111;
+  white-space: nowrap;
+  z-index: 20;
+}
+
+.developed-by span {
+  color: red;
+  font-size: 14px;
+  margin-left: 3px;
+}

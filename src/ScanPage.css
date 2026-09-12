@@ -1,0 +1,1619 @@
+/* =========================================================
+   SCAN PAGE
+========================================================= */
+
+.scan-page {
+  position: relative;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 28px clamp(24px, 7vw, 120px) 80px;
+  overflow: hidden;
+  background: #fff5e8;
+  border-left: 1px solid #171717;
+  border-right: 1px solid #171717;
+  color: #171717;
+}
+
+
+/* =========================================================
+   BACK HOME BUTTON
+========================================================= */
+
+.back-home {
+  position: relative;
+  z-index: 20;
+  padding: 11px 22px;
+  border: 4px solid #171717;
+  border-radius: 14px;
+  background: #fff;
+  color: #171717;
+  box-shadow: 6px 6px 0 #171717;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.back-home:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 3px 3px 0 #171717;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.scan-content {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 1250px;
+  margin: 55px auto 0;
+  text-align: center;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.scan-title-wrapper {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.scan-heading {
+  margin: 0;
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(34px, 5vw, 64px);
+  line-height: 1.15;
+  letter-spacing: -2px;
+  color: #171717;
+  text-shadow: 5px 5px 0 #ffe500;
+  transform: rotate(-1deg);
+}
+
+
+/* =========================================================
+   TITLE PINK UNDERLINE
+========================================================= */
+
+.title-underline {
+  position: relative;
+  width: 240px;
+  height: 18px;
+  margin: 8px auto 0;
+  transform: rotate(-2deg);
+}
+
+.title-underline span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  border-radius: 50%;
+  background: #ff3d91;
+}
+
+.title-underline span:first-child {
+  top: 2px;
+}
+
+.title-underline span:last-child {
+  top: 10px;
+  width: 65%;
+  left: 18%;
+  transform: rotate(-4deg);
+}
+
+
+/* =========================================================
+   SUBTITLE
+========================================================= */
+
+.scan-subtitle {
+  margin: 20px 0 55px;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #171717;
+}
+
+
+/* =========================================================
+   UPLOAD GRID
+========================================================= */
+
+.upload-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 42px;
+  width: 100%;
+}
+
+
+/* =========================================================
+   UPLOAD CARD
+========================================================= */
+
+.upload-card {
+  position: relative;
+  display: flex;
+  min-height: 310px;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  padding: 12px;
+  border: 4px solid #171717;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 7px 7px 0 #171717;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.upload-card:hover {
+  transform: translateY(-7px) rotate(-0.7deg);
+  box-shadow: 10px 12px 0 #171717;
+}
+
+
+/* =========================================================
+   VIEW LABEL
+========================================================= */
+
+.view-label {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  z-index: 10;
+  transform: translateX(-50%) rotate(-1deg);
+  white-space: nowrap;
+  padding: 10px 20px;
+  border: 4px solid #171717;
+  border-radius: 10px;
+  background: #ffe51b;
+  box-shadow: 4px 4px 0 #171717;
+  font-family: "Press Start 2P", monospace;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   INNER UPLOAD AREA
+========================================================= */
+
+.upload-placeholder {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  border: 3px dashed #171717;
+  border-radius: 14px;
+  background: #fffdfa;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   IMAGE ICON
+========================================================= */
+
+.image-icon {
+  display: flex;
+  width: 75px;
+  height: 75px;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #171717;
+  font-size: 48px;
+  line-height: 1;
+  transform: rotate(-1deg);
+}
+
+
+/* =========================================================
+   IMAGE PREVIEW
+========================================================= */
+
+.image-preview {
+  width: 100%;
+  height: 280px;
+  border: 3px dashed #171717;
+  border-radius: 14px;
+  object-fit: cover;
+  background: #fff;
+}
+
+
+/* =========================================================
+   START SCANNING BUTTON
+========================================================= */
+
+.start-scanning {
+  position: relative;
+  z-index: 10;
+  display: block;
+  margin: 55px auto 0;
+  padding: 23px 44px;
+  border: 4px solid #171717;
+  border-radius: 18px;
+  background: #c6ff00;
+  box-shadow: 7px 8px 0 #171717;
+  color: #171717;
+  font-family: "Press Start 2P", monospace;
+  font-size: 15px;
+  letter-spacing: 0;
+  cursor: pointer;
+  transition: 0.18s ease;
+}
+
+.start-scanning:hover:not(:disabled) {
+  transform: translate(4px, 4px);
+  box-shadow: 3px 4px 0 #171717;
+}
+
+.start-scanning:active:not(:disabled) {
+  transform: translate(7px, 8px);
+  box-shadow: 0 0 0 #171717;
+}
+
+.start-scanning:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.scan-message {
+  position: relative;
+  z-index: 10;
+  margin: 28px auto 0;
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   RESULTS
+========================================================= */
+
+.scan-results {
+  position: relative;
+  z-index: 10;
+  width: min(600px, 90%);
+  margin: 25px auto 0;
+  padding: 18px 25px;
+  border: 4px solid #171717;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 6px 6px 0 #ff3d91;
+  text-align: center;
+  font-weight: 900;
+}
+
+.scan-results p {
+  margin: 9px;
+}
+
+
+/* =========================================================
+   MUDI MATTERS STICKER
+========================================================= */
+
+.scan-sticker {
+  position: absolute;
+  top: 70px;
+  right: 7%;
+  z-index: 15;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 16px 22px;
+  border: 4px solid #171717;
+  background: #ffe51b;
+  box-shadow: 6px 7px 0 #171717;
+  font-family: "Press Start 2P", monospace;
+  font-size: 13px;
+  line-height: 1.5;
+
+  /* Starting position */
+  transform: rotate(-7deg);
+
+  /* Floating animation */
+  animation: floatMudi 3.5s ease-in-out infinite;
+
+  transform-origin: center;
+  transition: 0.25s ease;
+}
+
+.scan-sticker:hover {
+  animation-play-state: paused;
+  transform: rotate(-3deg) scale(1.04);
+}
+
+
+/* MUDI MATTERS FLOAT */
+
+@keyframes floatMudi {
+  0% {
+    transform: translateY(0) rotate(-7deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(-4deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(-7deg);
+  }
+}
+
+
+/* =========================================================
+   COMB STICKER
+========================================================= */
+
+.scan-comb {
+  position: absolute;
+  top: 365px;
+  right: 4%;
+  z-index: 15;
+  width: 70px;
+  height: auto;
+  object-fit: contain;
+
+  animation: floatComb 4s ease-in-out infinite;
+
+  transform-origin: center;
+  transition: 0.25s ease;
+}
+
+.scan-comb:hover {
+  animation-play-state: paused;
+  transform: rotate(8deg) scale(1.1);
+}
+
+
+/* COMB FLOAT */
+
+@keyframes floatComb {
+  0% {
+    transform: translateY(0) rotate(18deg);
+  }
+
+  50% {
+    transform: translateY(18px) rotate(21deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(18deg);
+  }
+}
+
+
+/* =========================================================
+   PINK HALFTONE DECORATIONS
+========================================================= */
+
+.scan-decoration {
+  position: absolute;
+  z-index: 1;
+  width: 180px;
+  height: 230px;
+  opacity: 0.95;
+
+  background-image:
+    radial-gradient(
+      circle,
+      #ff3d91 2px,
+      transparent 2.5px
+    );
+
+  background-size: 11px 11px;
+}
+
+
+/* =========================================================
+   LEFT PINK DOTS
+========================================================= */
+
+.pink-dots-left {
+  left: 20px;
+  top: 250px;
+
+  transform:
+    rotate(-8deg)
+    skewY(-4deg);
+
+  clip-path: polygon(
+    20% 0%,
+    70% 5%,
+    100% 30%,
+    82% 65%,
+    95% 90%,
+    45% 100%,
+    5% 80%,
+    0% 35%
+  );
+
+  animation: floatDotsLeft 6s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   RIGHT PINK DOTS
+========================================================= */
+
+.pink-dots-right {
+  right: 5px;
+  top: 480px;
+
+  transform:
+    rotate(8deg)
+    skewY(4deg);
+
+  clip-path: polygon(
+    15% 5%,
+    80% 0%,
+    100% 30%,
+    90% 70%,
+    65% 100%,
+    20% 90%,
+    0% 55%
+  );
+
+  animation: floatDotsRight 7s ease-in-out infinite;
+}
+
+
+/* SUBTLE DOT MOVEMENT */
+
+@keyframes floatDotsLeft {
+  0% {
+    transform:
+      translateY(0)
+      rotate(-8deg)
+      skewY(-4deg);
+  }
+
+  50% {
+    transform:
+      translateY(-8px)
+      rotate(-6deg)
+      skewY(-4deg);
+  }
+
+  100% {
+    transform:
+      translateY(0)
+      rotate(-8deg)
+      skewY(-4deg);
+  }
+}
+
+@keyframes floatDotsRight {
+  0% {
+    transform:
+      translateY(0)
+      rotate(8deg)
+      skewY(4deg);
+  }
+
+  50% {
+    transform:
+      translateY(10px)
+      rotate(10deg)
+      skewY(4deg);
+  }
+
+  100% {
+    transform:
+      translateY(0)
+      rotate(8deg)
+      skewY(4deg);
+  }
+}
+
+
+/* =========================================================
+   PIXEL DECORATIONS
+========================================================= */
+
+.scan-pixel {
+  position: absolute;
+  z-index: 12;
+  font-family: "Press Start 2P", monospace;
+  font-weight: 900;
+
+  /* Important: this is what makes YOUR existing
+     pixel decorations float */
+  animation: floatPixel 3s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   CYAN LEFT
+========================================================= */
+
+.pixel-cyan-left {
+  left: 95px;
+  top: 350px;
+  color: #00d5df;
+  font-size: 38px;
+  text-shadow: 2px 2px 0 #171717;
+
+  animation-delay: 0s;
+}
+
+
+/* =========================================================
+   PINK LEFT
+========================================================= */
+
+.pixel-pink-left {
+  left: 295px;
+  top: 540px;
+  color: #ff3d91;
+  font-size: 36px;
+
+  animation-delay: 0.8s;
+}
+
+
+/* =========================================================
+   CYAN BOTTOM
+========================================================= */
+
+.pixel-cyan-bottom {
+  left: 115px;
+  bottom: 100px;
+  color: #00d5df;
+  font-size: 40px;
+
+  animation-delay: 1.4s;
+}
+
+
+/* =========================================================
+   YELLOW BOTTOM
+========================================================= */
+
+.pixel-yellow-bottom {
+  right: 75px;
+  bottom: 90px;
+  color: #ffe51b;
+  font-size: 38px;
+  text-shadow: 2px 2px 0 #171717;
+
+  animation-delay: 2s;
+}
+
+
+/* =========================================================
+   PIXEL FLOAT ANIMATION
+========================================================= */
+
+@keyframes floatPixel {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(8deg) scale(1.08);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+}
+
+
+/* =========================================================
+   PINK RAYS
+========================================================= */
+
+.pink-rays {
+  position: absolute;
+  right: 16%;
+  top: 210px;
+  z-index: 12;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  transform: rotate(-15deg);
+
+  animation: floatRays 3.8s ease-in-out infinite;
+}
+
+.pink-rays span {
+  display: block;
+  width: 24px;
+  height: 6px;
+  background: #ff3d91;
+  transform: skewX(-20deg);
+}
+
+.pink-rays span:nth-child(2) {
+  width: 38px;
+}
+
+.pink-rays span:nth-child(3) {
+  width: 22px;
+}
+
+
+/* FLOATING RAYS */
+
+@keyframes floatRays {
+  0% {
+    transform: translateY(0) rotate(-15deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(-12deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(-15deg);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .scan-content {
+    max-width: 900px;
+  }
+
+  .upload-grid {
+    gap: 28px;
+  }
+
+  .upload-card {
+    min-height: 280px;
+  }
+
+  .upload-placeholder {
+    min-height: 250px;
+  }
+
+  .scan-sticker {
+    right: 4%;
+  }
+
+  .scan-comb {
+    right: 2%;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 780px) {
+
+  .scan-page {
+    padding: 24px 18px 60px;
+  }
+
+  .back-home {
+    font-size: 14px;
+  }
+
+  .scan-content {
+    margin-top: 55px;
+  }
+
+  .scan-heading {
+    font-size: clamp(24px, 8vw, 42px);
+    letter-spacing: -1px;
+  }
+
+  .scan-subtitle {
+    margin-bottom: 45px;
+    font-size: 15px;
+  }
+
+  .upload-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .upload-card {
+    min-height: 270px;
+  }
+
+  .upload-placeholder {
+    min-height: 240px;
+  }
+
+  .start-scanning {
+    margin-top: 50px;
+    padding: 19px 25px;
+    font-size: 11px;
+  }
+
+  .scan-sticker {
+    top: 20px;
+    right: 20px;
+    transform: rotate(-5deg) scale(0.75);
+
+    /* Keep floating on mobile too */
+    animation-name: floatMudiMobile;
+  }
+
+  .scan-comb {
+    display: none;
+  }
+
+  .pink-dots-left {
+    left: -70px;
+    top: 300px;
+  }
+
+  .pink-dots-right {
+    right: -80px;
+    top: 800px;
+  }
+
+  .pixel-cyan-left {
+    left: 15px;
+  }
+
+  .pixel-pink-left {
+    left: 20px;
+  }
+
+  .pixel-yellow-bottom {
+    right: 20px;
+  }
+
+  .pink-rays {
+    display: none;
+  }
+
+}
+
+
+/* MOBILE MUDI FLOAT */
+
+@keyframes floatMudiMobile {
+  0% {
+    transform: translateY(0) rotate(-5deg) scale(0.75);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(-2deg) scale(0.75);
+  }
+
+  100% {
+    transform: translateY(0) rotate(-5deg) scale(0.75);
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+  .scan-heading {
+    font-size: 22px;
+  }
+
+  .title-underline {
+    width: 160px;
+  }
+
+  .view-label {
+    font-size: 9px;
+    padding: 8px 12px;
+  }
+
+  .upload-card {
+    min-height: 245px;
+  }
+
+  .upload-placeholder {
+    min-height: 215px;
+    font-size: 16px;
+  }
+
+  .image-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 38px;
+  }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .scan-sticker,
+  .scan-comb,
+  .scan-pixel,
+  .scan-decoration,
+  .pink-rays {
+    animation: none;
+  }
+
+}
+/* =========================================
+   RESULT TITLE FIX
+========================================= */
+
+.result-small {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: 22px;
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+
+/* =========================================
+   CELEBRATION / POPPER ANIMATION
+========================================= */
+
+.celebration-wrapper {
+  position: relative;
+  width: 180px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+}
+
+.result-party {
+  font-size: 58px;
+  position: relative;
+  z-index: 3;
+  animation: partyPop 0.8s ease-out;
+}
+
+
+/* Pop the 🎉 into view */
+
+@keyframes partyPop {
+  0% {
+    transform: scale(0) rotate(-20deg);
+    opacity: 0;
+  }
+
+  55% {
+    transform: scale(1.35) rotate(8deg);
+    opacity: 1;
+  }
+
+  75% {
+    transform: scale(0.9) rotate(-4deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+
+/* =========================================
+   CONFETTI PIECES
+========================================= */
+
+.confetti {
+  position: absolute;
+  font-weight: 900;
+  font-size: 30px;
+  opacity: 0;
+  z-index: 2;
+}
+
+
+/* Left */
+
+.confetti-1 {
+  color: #ff3b92;
+  left: 30px;
+  top: 45px;
+  animation: confettiLeft 1s ease-out 0.15s forwards;
+}
+
+.confetti-2 {
+  color: #00c9ff;
+  left: 45px;
+  top: 55px;
+  animation: confettiLeftTwo 1s ease-out 0.1s forwards;
+}
+
+
+/* Right */
+
+.confetti-3 {
+  color: #ffe11a;
+  right: 30px;
+  top: 45px;
+  animation: confettiRight 1s ease-out 0.15s forwards;
+}
+
+.confetti-4 {
+  color: #72ff43;
+  right: 45px;
+  top: 55px;
+  animation: confettiRightTwo 1s ease-out 0.1s forwards;
+}
+
+
+/* Top */
+
+.confetti-5 {
+  color: #ff3b92;
+  top: 15px;
+  left: 50%;
+  animation: confettiTop 1s ease-out 0.1s forwards;
+}
+
+
+/* =========================================
+   CONFETTI ANIMATIONS
+========================================= */
+
+@keyframes confettiLeft {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(0.4);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-65px, -45px) rotate(-35deg) scale(1);
+    opacity: 0;
+  }
+}
+
+
+@keyframes confettiLeftTwo {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-80px, 25px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+
+@keyframes confettiRight {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(0.4);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(65px, -45px) rotate(35deg) scale(1);
+    opacity: 0;
+  }
+}
+
+
+@keyframes confettiRightTwo {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(80px, 25px) rotate(-45deg);
+    opacity: 0;
+  }
+}
+
+
+@keyframes confettiTop {
+  0% {
+    transform: translate(-50%, 20px) scale(0.3);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, -55px) scale(1.2);
+    opacity: 0;
+  }
+}
+.doubts-button {
+  margin-top: 18px;
+  background: #d67fa6;
+}
+/* =========================================================
+   ADD PHOTO POPUP
+========================================================= */
+
+.photo-options-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  animation: popupOverlayIn 0.2s ease-out;
+}
+
+
+/* =========================================================
+   POPUP
+========================================================= */
+
+.photo-options-popup {
+  width: min(520px, 94%);
+  margin-bottom: 25px;
+  padding: 25px 22px 20px;
+
+  border: 4px solid #171717;
+  border-radius: 28px;
+
+  background: #fffafa;
+
+  box-shadow: 8px 8px 0 #171717;
+
+  text-align: center;
+
+  animation: photoPopupIn 0.3s ease-out;
+}
+
+
+/* =========================================================
+   HANDLE
+========================================================= */
+
+.popup-handle {
+  width: 55px;
+  height: 7px;
+
+  margin: 0 auto 18px;
+
+  border-radius: 20px;
+
+  background: #999;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.photo-options-popup h2 {
+  margin: 0;
+
+  font-family: "Press Start 2P", monospace;
+  font-size: 24px;
+
+  color: #171717;
+}
+
+
+.popup-subtitle {
+  margin: 12px 0 25px;
+
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #666;
+}
+
+
+/* =========================================================
+   PHOTO OPTION BUTTON
+========================================================= */
+
+.photo-option {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 14px;
+  padding: 16px 18px;
+
+  border: 3px solid #171717;
+  border-radius: 17px;
+
+  color: #171717;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+
+.photo-option:hover {
+  transform: translate(3px, 3px);
+
+  box-shadow: 3px 3px 0 #171717;
+}
+
+
+.photo-option:active {
+  transform: translate(5px, 5px);
+
+  box-shadow: 0 0 0 #171717;
+}
+
+
+/* =========================================================
+   LIBRARY BUTTON
+========================================================= */
+
+.library-option {
+  background: #ffe11a;
+
+  box-shadow: 5px 5px 0 #171717;
+}
+
+
+/* =========================================================
+   CAMERA BUTTON
+========================================================= */
+
+.camera-option {
+  background: #ff9bc9;
+
+  box-shadow: 5px 5px 0 #171717;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.photo-option-icon {
+  width: 48px;
+  min-width: 48px;
+
+  font-size: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.photo-option-text {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+
+  flex: 1;
+}
+
+
+.photo-option-text strong {
+  font-family: "Press Start 2P", monospace;
+
+  font-size: 11px;
+
+  line-height: 1.4;
+}
+
+
+.photo-option-text small {
+  font-family: Arial, sans-serif;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.photo-option-arrow {
+  font-family: Arial, sans-serif;
+
+  font-size: 38px;
+  font-weight: 900;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   CANCEL
+========================================================= */
+
+.photo-cancel {
+  margin-top: 8px;
+
+  border: none;
+  background: transparent;
+
+  color: #555;
+
+  font-family: "Press Start 2P", monospace;
+  font-size: 11px;
+  font-weight: 900;
+
+  cursor: pointer;
+
+  padding: 10px 20px;
+
+  transition: 0.15s ease;
+}
+
+
+.photo-cancel:hover {
+  color: #171717;
+  transform: scale(1.05);
+}
+
+
+/* =========================================================
+   POPUP ANIMATIONS
+========================================================= */
+
+@keyframes photoPopupIn {
+  from {
+    opacity: 0;
+    transform: translateY(80px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+@keyframes popupOverlayIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .photo-options-popup {
+    width: 94%;
+
+    margin-bottom: 12px;
+
+    padding: 22px 14px 16px;
+
+    border-radius: 24px;
+
+    box-shadow: 6px 6px 0 #171717;
+  }
+
+
+  .photo-options-popup h2 {
+    font-size: 20px;
+  }
+
+
+  .popup-subtitle {
+    font-size: 12px;
+
+    margin-bottom: 20px;
+  }
+
+
+  .photo-option {
+    padding: 14px 12px;
+
+    border-radius: 15px;
+  }
+
+
+  .photo-option-icon {
+    width: 42px;
+    min-width: 42px;
+
+    font-size: 27px;
+  }
+
+
+  .photo-option-text strong {
+    font-size: 9px;
+  }
+
+
+  .photo-option-text small {
+    font-size: 10px;
+  }
+
+
+  .photo-option-arrow {
+    font-size: 32px;
+  }
+
+
+  .photo-cancel {
+    font-size: 9px;
+  }
+
+}
+/* =================================================
+   CAMERA POPUP
+================================================= */
+
+.camera-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  animation: popupOverlayIn 0.2s ease-out;
+}
+
+.camera-popup {
+  width: min(650px, 95%);
+  padding: 22px;
+  border: 4px solid #171717;
+  border-radius: 25px;
+  background: #fffafa;
+  box-shadow: 9px 9px 0 #171717;
+  text-align: center;
+  animation: cameraPopupIn 0.3s ease-out;
+}
+
+.camera-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.camera-header h2 {
+  margin: 0;
+  font-family: "Press Start 2P", monospace;
+  font-size: 18px;
+  color: #171717;
+}
+
+.camera-close {
+  width: 42px;
+  height: 42px;
+  border: 3px solid #171717;
+  border-radius: 10px;
+  background: #ff9bc9;
+  color: #171717;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 #171717;
+}
+
+.camera-close:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #171717;
+}
+
+.camera-preview-wrapper {
+  width: 100%;
+  min-height: 360px;
+  overflow: hidden;
+  border: 4px solid #171717;
+  border-radius: 18px;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.camera-video {
+  display: block;
+  width: 100%;
+  max-height: 55vh;
+  object-fit: cover;
+  transform: scaleX(-1);
+}
+
+.camera-error {
+  min-height: 320px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.camera-error-icon {
+  font-size: 55px;
+  margin-bottom: 15px;
+}
+
+.camera-error p {
+  max-width: 420px;
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.camera-error small {
+  color: #ccc;
+  font-size: 12px;
+}
+
+.capture-button {
+  width: 100%;
+  margin-top: 18px;
+  padding: 16px 20px;
+  border: 3px solid #171717;
+  border-radius: 15px;
+  background: #ffe11a;
+  color: #171717;
+  font-family: "Press Start 2P", monospace;
+  font-size: 12px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 5px 5px 0 #171717;
+  transition: 0.15s ease;
+}
+
+.capture-button:hover:not(:disabled) {
+  transform: translate(3px, 3px);
+  box-shadow: 2px 2px 0 #171717;
+}
+
+.capture-button:active:not(:disabled) {
+  transform: translate(5px, 5px);
+  box-shadow: 0 0 0 #171717;
+}
+
+.capture-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.camera-cancel {
+  margin-top: 16px;
+  border: none;
+  background: transparent;
+  color: #555;
+  font-family: "Press Start 2P", monospace;
+  font-size: 10px;
+  font-weight: 900;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.camera-cancel:hover {
+  color: #171717;
+}
+
+@keyframes cameraPopupIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+
+/* =================================================
+   MOBILE CAMERA
+================================================= */
+
+@media (max-width: 600px) {
+
+  .camera-overlay {
+    padding: 10px;
+  }
+
+  .camera-popup {
+    width: 96%;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 6px 6px 0 #171717;
+  }
+
+  .camera-header h2 {
+    font-size: 14px;
+  }
+
+  .camera-preview-wrapper {
+    min-height: 300px;
+  }
+
+  .camera-error {
+    min-height: 270px;
+  }
+
+  .capture-button {
+    font-size: 10px;
+    padding: 15px;
+  }
+
+  .camera-cancel {
+    font-size: 9px;
+  }
+}
