@@ -91,3 +91,43 @@ ai-hair-detector/
 ├── package.json
 ├── vite.config.js
 └── README.md
+
+
+🚀 How to Run
+1. Clone the Repository
+git clone https://github.com/hadhiya-mn/ai-hair-detector.git
+Move into the project folder:
+cd ai-hair-detector
+2. Install Frontend Dependencies
+Install the required Node.js packages:
+npm install
+3. Start the Frontend
+Run the Vite development server:
+npm run dev
+The frontend will normally be available at:
+http://localhost:5173/
+4. Set Up the Backend
+Open a new terminal and move into the backend folder:
+cd backend
+Install the required Python packages:
+pip install fastapi uvicorn onnxruntime opencv-python numpy python-multipart
+5. Start the FastAPI Backend
+Run:
+uvicorn main:app --reload
+The backend will normally be available at:
+http://127.0.0.1:8000
+You can also open the FastAPI documentation at:
+http://127.0.0.1:8000/docs
+6. Open the Website
+Once both the frontend and backend are running, open:
+http://localhost:5173/
+Upload:
+- 📸 Front photo
+- 📸 Top photo
+- 📸 Back photo
+Then let the AI Hair Detector do its completely unnecessary but entertaining job. 😂
+⚠️ Make sure the frontend and backend are running at the same time for scanning to work correctly.
+Built with curiosity, AI, and absolutely no practical reason. 😂
+
+
+Developed by Team FAAH — Fasna & Hadhiya
