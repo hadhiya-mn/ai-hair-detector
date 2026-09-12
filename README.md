@@ -1,16 +1,93 @@
-# React + Vite
+# 🧑‍🦲 AI Hair Detector
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Because we can. 😂
 
-Currently, two official plugins are available:
+**AI Hair Detector** is a fun and experimental computer-vision project that estimates how many hairs are on a person's head using three ordinary photos — **Front, Top, and Back**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+It was built as a **Useless/Fun Hackathon project**, where the goal was not to solve an important problem, but to build something funny, unusual, and technically interesting.
 
-## React Compiler
+## 💡 What Does It Do?
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Upload three photos of a person's head:
 
-## Expanding the ESLint configuration
+- 📸 Front view
+- 📸 Top view
+- 📸 Back view
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The application sends the images to an AI-powered backend, analyzes the visible hair patterns, and produces an estimated **Total Hair Count**.
+
+The result is intentionally presented in a fun, exaggerated way — because nobody actually needs to know their exact hair count. 😎
+
+## 🧠 How It Works
+
+The project uses:
+
+1. **React + Vite** for the interactive frontend
+2. **FastAPI** for the backend API
+3. **ONNX / ResNet18** for image analysis
+4. Computer-vision techniques to estimate hair coverage and texture
+5. Three different views of the head to produce a combined estimate
+
+The three individual image estimates are combined into one final hair-count result.
+
+> ⚠️ This is a fun experiment and **not a medically accurate hair-counting system**.
+
+## 🎨 Features
+
+- 🧑‍🦱 AI-based hair estimation
+- 📸 Three-view scanning — Front, Top & Back
+- 🟢 Animated scanning experience
+- 🎉 Fun result and celebration screen
+- 🧑‍🦲 Special **Bald Legend** result
+- 🪮 Animated comb interaction
+- 🔊 Fun sound effects
+- ❓ "Any Doubts?" page
+- 🤔 "Why Count Hair?" page
+- ℹ️ About page
+- 🎨 Retro / playful visual design
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- React
+- Vite
+- React Router
+- CSS
+- JavaScript
+
+### Backend
+
+- Python
+- FastAPI
+- ONNX Runtime
+- OpenCV
+- NumPy
+- ResNet18
+
+## 📂 Project Structure
+
+```text
+ai-hair-detector/
+│
+├── backend/
+│   ├── main.py
+│   └── models/
+│       └── resnet18.onnx
+│
+├── public/
+│   ├── bald-legend.mpeg
+│   └── dialogue.mpeg
+│
+├── src/
+│   ├── App.jsx
+│   ├── ScanPage.jsx
+│   ├── ScanningPage.jsx
+│   ├── DoubtsPage.jsx
+│   ├── WhyPage.jsx
+│   ├── AboutPage.jsx
+│   └── assets/
+│
+├── package.json
+├── vite.config.js
+└── README.md
